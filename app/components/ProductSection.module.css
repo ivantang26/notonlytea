@@ -1,0 +1,223 @@
+.productSection {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.productCard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.productCard:nth-child(1) {
+  background: linear-gradient(135deg, rgba(20, 25, 15, 0.90) 0%, rgba(30, 35, 20, 0.85) 100%);
+}
+
+.productCard:nth-child(2) {
+  background: linear-gradient(135deg, rgba(25, 30, 20, 0.90) 0%, rgba(35, 40, 25, 0.85) 100%);
+}
+
+.productCard:hover {
+  transform: scale(1.02);
+}
+
+.tierBadge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.tierBadge span {
+  font-family: 'Hydrella', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.viewButton {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.viewButton:hover {
+  background: #ffffff;
+  transform: scale(1.05);
+}
+
+.viewButton svg {
+  color: #000000;
+  width: 24px;
+  height: 24px;
+}
+
+.productImage {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 520px;
+  z-index: 5;
+  transition: transform 0.3s ease;
+}
+
+.productCard:nth-child(2) .productImage {
+  left: 50%;
+}
+
+.productCard:hover .productImage {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.productImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+}
+
+.productInfo {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+}
+
+.seriesTitle {
+  font-family: 'Hydrella', sans-serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.productCount {
+  font-family: 'Hydrella', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .productCard {
+    min-height: 100vh;
+    padding: 2.5rem;
+  }
+
+  .productImage {
+    left: 50%;
+    width: 75%;
+    max-width: 420px;
+  }
+
+  .seriesTitle {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .productCard {
+    padding: 2rem;
+    min-height: 80vh;
+  }
+
+  .tierBadge {
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .tierBadge span {
+    font-size: 0.75rem;
+  }
+
+  .viewButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .viewButton svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .productImage {
+    width: 85%;
+    max-width: 360px;
+    left: 50%;
+  }
+
+  .seriesTitle {
+    font-size: 2.5rem;
+  }
+
+  .productCount {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    padding: 1.5rem;
+    min-height: 70vh;
+  }
+
+  .tierBadge {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .productImage {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .seriesTitle {
+    font-size: 2rem;
+  }
+}
+

@@ -1,0 +1,61 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  padding: 2rem;
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.title {
+  font-family: 'Hydrella', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 300;
+  background: linear-gradient(91.77deg, #FFE1C0 0.41%, #FFF7F2 50.43%, #FFCB8E 99.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: 'Hydrella', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: 'Hydrella', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.homeLink {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: #414607;
+  border-radius: 4px;
+  font-family: 'Hydrella', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.homeLink:hover {
+  background: #5a5f09;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(65, 70, 7, 0.5);
+}
+

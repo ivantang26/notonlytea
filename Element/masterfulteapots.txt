@@ -1,0 +1,22 @@
+/* Masterful Teapots Authentic Teas */
+
+position: absolute;
+width: 467px;
+height: 116px;
+left: calc(50% - 467px/2 - 420.5px);
+top: 622px;
+
+font-family: 'Hydrella';
+font-style: normal;
+font-weight: 300;
+font-size: 68px;
+line-height: 85.1%;
+/* or 58px */
+letter-spacing: -0.04em;
+
+background: linear-gradient(91.77deg, #FFE1C0 0.41%, #FFF7F2 50.43%, #FFCB8E 99.49%), #F5F2ED;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+

@@ -1,0 +1,37 @@
+.unifiedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.unifiedBackground::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/background2.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.2;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .unifiedBackground::before {
+    background-attachment: scroll;
+  }
+}
+

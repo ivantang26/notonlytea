@@ -1,0 +1,18 @@
+{
+  "name": "Not Only Tea - Hong Kong",
+  "short_name": "Not Only Tea",
+  "description": "Discover the artistry of our handmade tea pots, crafted by master artisans",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#414607",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+

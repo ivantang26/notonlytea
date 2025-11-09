@@ -1,0 +1,28 @@
+/* Frame 103 */
+
+
+***Explore Products*** button
+
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10.3037px 15.4555px;
+gap: 8.59px;
+
+width: 160.1px;
+height: 41.21px;
+
+background: #414607;
+backdrop-filter: blur(10.5613px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 3.43456px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;

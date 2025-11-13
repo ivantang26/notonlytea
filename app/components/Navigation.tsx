@@ -24,7 +24,7 @@ export default function Navigation() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/our-teas">Our Teas</Link></li>
             <li><a href="#teawear">Teawear</a></li>
-            <li><a href="#jian-zhan">Jian Zhan</a></li>
+            <li><Link href="/jian-zhan">Jian Zhan</Link></li>
             <li><a href="#masters-work">Master&apos;s work</a></li>
           </ul>
           <div className={styles.navIcons}>

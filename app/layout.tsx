@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Footer from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'Not Only Tea - Hong Kong | Handmade Tea Pots by Master Artisans',
@@ -35,7 +36,10 @@ export default function RootLayout({
           src="https://unpkg.com/@splinetool/viewer@1.0.0/build/spline-viewer.js"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

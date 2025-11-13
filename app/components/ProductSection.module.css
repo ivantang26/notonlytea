@@ -10,7 +10,7 @@
 .productGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100vh;
+  height: clamp(95vh, 105vh, 115vh);
   width: 100%;
   position: relative;
   z-index: 1;
@@ -22,22 +22,24 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 3rem;
+  padding: clamp(3.5rem, 6vw, 5rem);
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
 }
 
 .productCard:nth-child(1) {
-  background: linear-gradient(135deg, rgba(20, 25, 15, 0.90) 0%, rgba(30, 35, 20, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(20, 25, 15, 0.75) 0%, rgba(30, 35, 20, 0.7) 100%);
 }
 
 .productCard:nth-child(2) {
-  background: linear-gradient(135deg, rgba(25, 30, 20, 0.90) 0%, rgba(35, 40, 25, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(25, 30, 20, 0.75) 0%, rgba(35, 40, 25, 0.7) 100%);
 }
 
 .productCard:hover {
   transform: scale(1.02);
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.45);
 }
 
 .tierBadge {
@@ -61,28 +63,34 @@
 }
 
 .viewButton {
-  width: 48px;
-  height: 48px;
+  box-sizing: border-box;
+  width: 59px;
+  height: 59px;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: none;
   padding: 0;
 }
 
-.viewButton:hover {
-  background: #ffffff;
-  transform: scale(1.05);
+.viewButton svg {
+  color: #111111;
+  width: 28px;
+  height: 28px;
 }
 
-.viewButton svg {
-  color: #000000;
-  width: 24px;
-  height: 24px;
+.productCard:hover .viewButton {
+  background: #A1A91D;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.productCard:hover .viewButton svg {
+  color: #ffffff;
 }
 
 .productImage {
@@ -90,25 +98,29 @@
   top: 50%;
   left: 55%;
   transform: translate(-50%, -50%);
-  width: 75%;
-  max-width: 520px;
+  width: 82%;
+  max-width: 560px;
   z-index: 5;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .productCard:nth-child(2) .productImage {
   left: 50%;
 }
 
-.productCard:hover .productImage {
-  transform: translate(-50%, -50%) scale(1.08);
-}
-
 .productImage img {
   width: 100%;
   height: auto;
-  display: block;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.55));
+  transition: transform 0.4s ease;
+}
+
+.productCard:hover .productImage {
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .productInfo {
@@ -119,20 +131,27 @@
 
 .seriesTitle {
   font-family: 'Hydrella', sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
+  font-size: clamp(3.5rem, 5.5vw, 6rem);
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+  background: linear-gradient(91.77deg, #FFE1C0 0.41%, #FFF7F2 50.43%, #FFCB8E 99.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
   text-transform: capitalize;
 }
 
 .productCount {
   font-family: 'Hydrella', sans-serif;
-  font-size: 1.125rem;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: -0.01em;
+  background: linear-gradient(91.77deg, #FFE1C0 0.41%, #FFF7F2 50.43%, #FFCB8E 99.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 0;
 }
 
@@ -149,12 +168,12 @@
 
   .productImage {
     left: 50%;
-    width: 75%;
-    max-width: 420px;
+    width: 78%;
+    max-width: 460px;
   }
 
   .seriesTitle {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
   }
 }
 
@@ -175,13 +194,13 @@
   }
 
   .viewButton {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
   }
 
   .viewButton svg {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .productImage {
@@ -191,11 +210,11 @@
   }
 
   .seriesTitle {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .productCount {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
 

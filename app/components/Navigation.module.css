@@ -48,7 +48,6 @@
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.9);
   text-align: left;
-  margin-left: -1.5rem;
 }
 
 .locationBadge img {
@@ -161,21 +160,48 @@
 .mobileMenu {
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   width: 280px;
   height: 100vh;
   background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
   z-index: 1002;
   padding: 6rem 2rem 2rem;
   overflow-y: auto;
 }
 
 .mobileMenu.mobileMenuOpen {
-  right: 0;
+  left: 0;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1003;
+}
+
+.closeButton:hover {
+  color: #FFE1C0;
+  transform: rotate(90deg);
+}
+
+.closeButton svg {
+  width: 24px;
+  height: 24px;
 }
 
 .mobileNavLinks {
@@ -189,7 +215,7 @@
 
 .mobileNavLinks li {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(-20px);
   animation: slideIn 0.3s ease forwards;
 }
 
@@ -294,6 +320,11 @@
   /* Show hamburger menu on mobile */
   .mobileMenuToggle {
     display: flex;
+    order: -1;
+  }
+  
+  .navIcons {
+    order: 1;
   }
 }
 

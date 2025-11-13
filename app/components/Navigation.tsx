@@ -27,6 +27,18 @@ export default function Navigation() {
           </Link>
         </div>
         <div className={styles.navBottom}>
+          {/* Mobile Menu Toggle */}
+          <button 
+            className={styles.mobileMenuToggle} 
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+          </button>
+          
           <div className={styles.locationBadge}>
             <img src="/images/earth.png" alt="" width="16" height="16" />
             <span>Hong Kong SAR China</span>
@@ -58,23 +70,21 @@ export default function Navigation() {
               </svg>
             </button>
           </div>
-          
-          {/* Mobile Menu Toggle */}
-          <button 
-            className={styles.mobileMenuToggle} 
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-            aria-expanded={isMobileMenuOpen}
-          >
-            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
-            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
-            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
-          </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
       <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <button 
+          className={styles.closeButton} 
+          onClick={closeMobileMenu}
+          aria-label="Close menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
         <ul className={styles.mobileNavLinks}>
           <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
           <li><Link href="/our-teas" onClick={closeMobileMenu}>Our Teas</Link></li>

@@ -1,9 +1,20 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 
 export default function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className={styles.navigation}>
       <div className={styles.navContainer}>
@@ -47,8 +58,36 @@ export default function Navigation() {
               </svg>
             </button>
           </div>
+          
+          {/* Mobile Menu Toggle */}
+          <button 
+            className={styles.mobileMenuToggle} 
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+            <span className={`${styles.hamburgerLine} ${isMobileMenuOpen ? styles.open : ''}`}></span>
+          </button>
         </div>
       </div>
+      
+      {/* Mobile Menu */}
+      <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <ul className={styles.mobileNavLinks}>
+          <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
+          <li><Link href="/our-teas" onClick={closeMobileMenu}>Our Teas</Link></li>
+          <li><a href="#teawear" onClick={closeMobileMenu}>Teawear</a></li>
+          <li><Link href="/jian-zhan" onClick={closeMobileMenu}>Jian Zhan</Link></li>
+          <li><a href="#masters-work" onClick={closeMobileMenu}>Master&apos;s work</a></li>
+        </ul>
+      </div>
+      
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className={styles.mobileMenuOverlay} onClick={closeMobileMenu}></div>
+      )}
     </nav>
   );
 }

@@ -23,7 +23,7 @@ export default function JianZhanPage() {
           
           <div className={styles.productDetails}>
             <div className={styles.productTitle}>
-              <h1>Golder<br />EyeBrows</h1>
+              <h1>Golden<br />EyeBrows</h1>
             </div>
             
             <p className={styles.productDescription}>

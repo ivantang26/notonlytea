@@ -27,7 +27,7 @@ export default function OurTeasHero() {
         </div>
 
         <div className={styles.splineContainer}>
-          <SplineViewer url="/spline/tea_box.spline" />
+          <SplineViewer />
         </div>
       </div>
     </section>

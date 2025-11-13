@@ -13,17 +13,17 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 1400px;
-  padding: 10rem 2rem 3rem;
+  max-width: 1600px;
+  padding: 6rem 1.5rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .textContent {
   flex: 1;
-  max-width: 600px;
+  max-width: 620px;
 }
 
 .heroTitle {
@@ -61,32 +61,32 @@
 .btnPrimary {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  height: 48px;
+  padding: 12px 17px;
   justify-content: center;
   align-items: center;
-  padding: 12px 18px;
   gap: 10px;
-  width: 186px;
-  height: 48px;
-  background: #454D07;
+  border-radius: 4px;
+  border: 1px solid #FFCC66;
+  background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(12.3px);
   -webkit-backdrop-filter: blur(12.3px);
-  border-radius: 4px;
   font-family: 'Hydrella', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(69, 77, 7, 0.3);
   flex: none;
   order: 1;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .btnPrimary:hover {
-  background: #5a6209;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #FFE1C0;
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(69, 77, 7, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btnPrimary img {
@@ -128,8 +128,8 @@
 
 .splineContainer {
   flex: 1;
-  height: 1000px;
-  max-width: 900px;
+  height: 1100px;
+  max-width: 1100px;
   width: 100%;
   position: relative;
   animation: fadeInRight 1.2s ease-out 0.3s backwards;
@@ -180,8 +180,8 @@
   }
 
   .splineContainer {
-    height: 800px;
-    max-width: 900px;
+    height: 900px;
+    max-width: 1100px;
   }
 }
 
@@ -199,8 +199,8 @@
   }
 
   .splineContainer {
-    height: 600px;
-    max-width: 700px;
+    height: 650px;
+    max-width: 720px;
   }
 
   .locationBadge {
@@ -237,8 +237,8 @@
   }
 
   .splineContainer {
-    height: 450px;
-    max-width: 600px;
+    height: 500px;
+    max-width: 620px;
   }
 
   .btnPrimary {

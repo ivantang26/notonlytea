@@ -1,54 +1,32 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import type { DetailedHTMLProps, HTMLAttributes } from "react";
 
 interface SplineViewerProps {
-  url: string;
+  url?: string;
   className?: string;
 }
 
-export default function SplineViewer({ url, className }: SplineViewerProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+const DEFAULT_SPLINE_URL = "https://prod.spline.design/yZC4zmODWYcj9Ulv/scene.splinecode";
 
-  useEffect(() => {
-    if (containerRef.current && typeof window !== 'undefined') {
-      // Check if spline-viewer is defined
-      if (customElements.get('spline-viewer')) {
-        const viewer = document.createElement('spline-viewer');
-        viewer.setAttribute('url', url);
-        viewer.setAttribute('loading-anim', 'true');
-        
-        viewer.addEventListener('load', () => {
-          setIsLoaded(true);
-        });
-
-        containerRef.current.appendChild(viewer);
-
-        return () => {
-          if (containerRef.current) {
-            containerRef.current.innerHTML = '';
-          }
-        };
-      }
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "spline-viewer": DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
+        url?: string;
+        "loading-anim"?: string;
+      };
     }
-  }, [url]);
-
-  return (
-    <div ref={containerRef} className={className} style={{ width: '100%', height: '100%' }}>
-      {!isLoaded && (
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100%',
-          color: 'rgba(255, 255, 255, 0.6)',
-          fontSize: '0.875rem'
-        }}>
-          Loading 3D Model...
-        </div>
-      )}
-    </div>
-  );
+  }
 }
 
+export default function SplineViewer({ url = DEFAULT_SPLINE_URL, className }: SplineViewerProps) {
+  return (
+    <spline-viewer
+      url={url}
+      className={className}
+      loading-anim="true"
+      style={{ width: "100%", height: "100%" }}
+    />
+  );
+}

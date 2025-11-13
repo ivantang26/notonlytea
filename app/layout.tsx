@@ -33,7 +33,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <script 
           type="module" 
-          src="https://unpkg.com/@splinetool/viewer@1.0.0/build/spline-viewer.js"
+          src="https://unpkg.com/@splinetool/viewer@1.11.2/build/spline-viewer.js"
         />
       </head>
       <body>

@@ -12,15 +12,13 @@ export default function Footer() {
       <div className={styles.footerContent}>
         {/* Contact Info */}
         <div className={styles.contactSection}>
-          <a href="tel:+17635547-12-97" className={styles.phone}>
-            +1 (7635) 547-12-97
-          </a>
+          
           <a href="mailto:notonlytea@gmail.com" className={styles.email}>
             notonlytea@gmail.com
           </a>
-          <div className={styles.studioCredit}>
-            zzstudio.design
-          </div>
+          {/*<div className={styles.studioCredit}>
+            NotOnlyTea Limited
+          </div>*/}
         </div>
 
         {/* Quick Links */}

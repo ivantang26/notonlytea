@@ -112,24 +112,28 @@
 .primaryBtn {
   box-sizing: border-box;
   display: inline-flex;
-  align-items: center;
+  height: 48px;
+  padding: 12px 17px;
   justify-content: center;
+  align-items: center;
   gap: 10px;
-  padding: 12px 20px;
-  background: #454D07;
   border-radius: 4px;
+  border: 1px solid #FFCC66;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
   font-family: 'Hydrella', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
   transition: all 0.3s ease;
-  box-shadow: 0 12px 30px rgba(69, 77, 7, 0.35);
 }
 
 .primaryBtn:hover {
-  background: #5a6209;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #FFE1C0;
   transform: translateY(-2px);
-  box-shadow: 0 18px 40px rgba(69, 77, 7, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .primaryBtn img {

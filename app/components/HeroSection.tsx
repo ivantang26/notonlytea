@@ -28,7 +28,7 @@ export default function HeroSection() {
         </div>
 
         <div className={styles.splineContainer}>
-          <SplineViewer url="/spline/tea_box.spline" />
+          <SplineViewer />
         </div>
       </div>
 

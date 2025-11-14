@@ -31,8 +31,8 @@ export default function Footer() {
             </div>
             <div className={styles.linkColumn}>
               <a href="/about">About us</a>
-              <a href="https://liftmedia.com" target="_blank" rel="noopener noreferrer">
-                Lift Media
+              <a href="https://notonlytea.com" target="_blank" rel="noopener noreferrer">
+                NotOnlyTea Limited
               </a>
             </div>
           </div>

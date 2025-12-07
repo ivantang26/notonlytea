@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.copyright}>
-          © 2020 Lift Media. All rights reserved
+          © 2025 Not Only Tea Limited. All rights reserved
         </div>
       </div>
 

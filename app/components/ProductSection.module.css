@@ -30,11 +30,11 @@
 }
 
 .productCard:nth-child(1) {
-  background: linear-gradient(135deg, rgba(20, 25, 15, 0.75) 0%, rgba(30, 35, 20, 0.7) 100%);
+  background: rgba(17, 17, 17, 0.82);
 }
 
 .productCard:nth-child(2) {
-  background: linear-gradient(135deg, rgba(25, 30, 20, 0.75) 0%, rgba(35, 40, 25, 0.7) 100%);
+  background: rgba(17, 17, 17, 0.82);
 }
 
 .productCard:hover {
@@ -109,12 +109,12 @@
 }
 
 .productImage img {
-  width: 100%;
+  width: 150%;
   height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -44%);
   filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.55));
   transition: transform 0.4s ease;
 }

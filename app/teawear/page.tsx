@@ -31,12 +31,6 @@ const teapotProducts = [
     price: 'HKD 2200',
     image: '/images/teapots/DSC_8835.png',
   },
-  {
-    id: 5,
-    name: 'NOT fire clay',
-    price: 'HKD 2200',
-    image: '/images/teapots/DSC_8836.png',
-  },
 ];
 
 export default function TeawearPage() {

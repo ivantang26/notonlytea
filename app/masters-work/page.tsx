@@ -36,7 +36,7 @@ export default function MastersWorkPage() {
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
-          <img src="/images/jianzhang/0H3A7172.jpg" alt="Master's teapot craftsmanship" />
+          <img src="/images/masterwork1.jpg" alt="Master's teapot craftsmanship" />
         </div>
         <div className={styles.heroOverlay}></div>
         
@@ -71,7 +71,16 @@ export default function MastersWorkPage() {
           under the scope
         </h2>
         <div className={styles.microscopeImage}>
-          <img src="/images/jianzhang/white-Photoroom (2) 1.png" alt="Microscopic view of glaze patterns" />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className={styles.microscopeVideo}
+          >
+            <source src="/images/jianzhang/vid.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className={styles.slideDots}>
           <span className={`${styles.dot} ${styles.active}`}></span>

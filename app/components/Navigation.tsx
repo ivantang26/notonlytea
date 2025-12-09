@@ -46,9 +46,9 @@ export default function Navigation() {
           <ul className={styles.navLinks}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/our-teas">Our Teas</Link></li>
-            <li><a href="#teawear">Teawear</a></li>
+            <li><Link href="/teawear">Teawear</Link></li>
             <li><Link href="/jian-zhan">Jian Zhan</Link></li>
-            <li><a href="#masters-work">Master&apos;s work</a></li>
+            <li><Link href="/masters-work">Master&apos;s work</Link></li>
           </ul>
           <div className={styles.navIcons}>
             <button className={styles.iconButton} aria-label="Search">
@@ -88,9 +88,9 @@ export default function Navigation() {
         <ul className={styles.mobileNavLinks}>
           <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
           <li><Link href="/our-teas" onClick={closeMobileMenu}>Our Teas</Link></li>
-          <li><a href="#teawear" onClick={closeMobileMenu}>Teawear</a></li>
+          <li><Link href="/teawear" onClick={closeMobileMenu}>Teawear</Link></li>
           <li><Link href="/jian-zhan" onClick={closeMobileMenu}>Jian Zhan</Link></li>
-          <li><a href="#masters-work" onClick={closeMobileMenu}>Master&apos;s work</a></li>
+          <li><Link href="/masters-work" onClick={closeMobileMenu}>Master&apos;s work</Link></li>
         </ul>
       </div>
       

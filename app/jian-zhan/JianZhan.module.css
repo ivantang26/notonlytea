@@ -331,7 +331,7 @@
   align-items: center;
   padding: 12px 17px;
   gap: 10px;
-  width: 322px;
+  min-width: 322px;
   height: 48px;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.12);
@@ -411,10 +411,6 @@
   .contactButton {
     max-width: 100%;
   }
-
-  .exploreButton {
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -432,10 +428,6 @@
 
   .scopeImage {
     max-width: 350px;
-  }
-
-  .exploreButton {
-    width: 100%;
   }
 }
 

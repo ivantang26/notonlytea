@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import styles from './MasterworkSection.module.css';
 
 export default function MasterworkSection() {
@@ -15,9 +16,11 @@ export default function MasterworkSection() {
           The best of<br />
           master's work
         </h2>
-        <button className={styles.exploreButton}>
-          EXPLORE MORE
-        </button>
+        <Link href="/masters-work">
+          <button className={styles.exploreButton}>
+            EXPLORE MORE
+          </button>
+        </Link>
       </div>
     </section>
   );

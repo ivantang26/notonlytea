@@ -3,7 +3,10 @@ import UnifiedBackground from '../components/UnifiedBackground';
 import styles from './JianZhan.module.css';
 import { Metadata } from 'next';
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://notonlytea.com';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Jian Zhan - Golden EyeBrows | Not Only Tea',
   description: 'Discover the artistry of our authentic Jian Zhan tea cups, crafted by master artisans whose work is celebrated in museums.',
 };

@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Footer from './components/Footer'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://notonlytea.com'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Not Only Tea - Hong Kong | Handmade Tea Pots by Master Artisans',
   description: 'Discover the artistry of our handmade tea pots, crafted by master artisans. Experience authentic Chinese tea culture with premium teaware from Hong Kong.',
   keywords: ['tea', 'teapot', 'Hong Kong', 'handmade', 'artisan', 'Chinese tea', 'teaware'],
@@ -12,6 +15,7 @@ export const metadata: Metadata = {
     description: 'Discover the artistry of our handmade tea pots, crafted by master artisans.',
     type: 'website',
     locale: 'en_US',
+    url: siteUrl,
   },
   twitter: {
     card: 'summary_large_image',

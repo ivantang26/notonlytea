@@ -60,22 +60,24 @@
 
 .btnPrimary {
   box-sizing: border-box;
-  display: flex;
-  height: 48px;
-  padding: 12px 17px;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 12px 18px;
   gap: 10px;
+  min-width: 186px;
+  height: 48px;
   border-radius: 4px;
-  border: 1px solid #FFCC66;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12.3px);
-  -webkit-backdrop-filter: blur(12.3px);
+  background: #414607;
+  border: none;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
   font-family: 'Hydrella', sans-serif;
   font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -83,10 +85,9 @@
 }
 
 .btnPrimary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #FFE1C0;
+  background: #4f5608;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
 .btnPrimary img {

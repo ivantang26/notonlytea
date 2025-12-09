@@ -114,41 +114,52 @@
 
 .buyButton,
 .contactButton {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 10px;
+  height: 48px;
+  min-width: 200px;
   width: 100%;
   max-width: 534px;
-  padding: 1.25rem 2rem;
-  font-family: 'Hydrella', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
   border-radius: 4px;
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(12.3px);
-  -webkit-backdrop-filter: blur(12.3px);
+  flex: none;
+  flex-grow: 0;
 }
 
 .buyButton {
-  background: #454D07;
-  border: 1px solid #FFCC66;
-  color: #ffffff;
+  background: #414607;
+  border: none;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .buyButton:hover {
-  background: #5a6209;
+  background: #4f5608;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(69, 77, 7, 0.4);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
 .contactButton {
-  background: rgba(23, 23, 23, 0.8);
-  border: 1px solid #FFCC66;
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .contactButton:hover {
-  background: rgba(23, 23, 23, 1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 225, 192, 0.4);
   transform: translateY(-2px);
 }
 
@@ -267,7 +278,7 @@
 }
 
 .scopeImage img,
-.scopeImage video {
+.scopeVideo {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -320,7 +331,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0;
-  text-transform: lowercase;
 }
 
 .exploreButton {

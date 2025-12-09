@@ -138,6 +138,7 @@
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
+.primaryButton img,
 .primaryButton svg {
   width: 20px;
   height: 20px;
@@ -345,9 +346,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
-  border-left: 1px solid rgba(207, 138, 0, 0.27);
-  border-right: 1px solid rgba(207, 138, 0, 0.27);
-  border-top: 1px solid rgba(207, 138, 0, 0.27);
   padding: 2rem 0 2rem 1rem;
 }
 
@@ -358,25 +356,16 @@
   line-height: 1.35;
   color: rgba(255, 255, 255, 0.57);
   letter-spacing: -0.02em;
-  border-left: 1px solid rgba(207, 138, 0, 0.27);
-  border-right: 1px solid rgba(207, 138, 0, 0.27);
-  border-top: 1px solid rgba(207, 138, 0, 0.27);
   padding: 1.5rem 1rem;
 }
 
 .productAttributes {
   display: flex;
-  border: 1px solid rgba(207, 138, 0, 0.27);
 }
 
 .attribute {
   flex: 1;
   padding: 1.5rem 1rem;
-  border-right: 1px solid rgba(207, 138, 0, 0.27);
-}
-
-.attribute:last-child {
-  border-right: none;
 }
 
 .attributeLabel {
@@ -445,28 +434,35 @@
 }
 
 .addToCartButton {
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
   padding: 12px 18px;
+  gap: 10px;
+  min-width: 200px;
   height: 48px;
-  background: #454d07;
-  backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
+  background: #414607;
+  border: none;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .addToCartButton:hover {
-  background: #5a6309;
+  background: #4f5608;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
 .addToCartButton svg {

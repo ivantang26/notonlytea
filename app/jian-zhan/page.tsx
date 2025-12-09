@@ -103,7 +103,16 @@ export default function JianZhanPage() {
       <section className={styles.miraclesSection}>
         <h2>Miracles<br />under the scope</h2>
         <div className={styles.scopeImage}>
-          <img src="/images/jianzhang/0H3A7172.jpg" alt="Microscope view of Jian Zhan glaze" />
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className={styles.scopeVideo}
+          >
+            <source src="/images/jianzhang/vid.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
       

@@ -56,9 +56,7 @@ export default function MastersWorkPage() {
             About the masters
           </button>
           <button className={styles.primaryButton}>
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
+            <img src="/images/teapot.png" alt="" width="20" height="20" />
             Explore products
           </button>
         </div>
@@ -165,7 +163,7 @@ export default function MastersWorkPage() {
           </div>
         </div>
         <div className={styles.featuredImage}>
-          <img src="/images/jianzhang/0H3A7171.jpg" alt="Yunan Lily Black teapot" />
+          <img src="/images/yunanlilyblack.jpg" alt="Yunan Lily Black teapot" />
         </div>
       </section>
       

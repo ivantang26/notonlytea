@@ -11,7 +11,7 @@ const teapotProducts = [
     id: 1,
     name: 'Not only Tea fire clay',
     price: 'HKD 2200',
-    image: '/images/teapots/white-Photoroom (7).jpg',
+    image: '/images/teapots/white d 01 1.png',
   },
   {
     id: 2,
@@ -61,9 +61,7 @@ export default function TeawearPage() {
               About the masters
             </button>
             <button className={styles.primaryButton}>
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
+              <img src="/images/teapot.png" alt="" width="20" height="20" />
               Explore products
             </button>
           </div>
@@ -142,16 +140,12 @@ export default function TeawearPage() {
             The best of<br />
             master's work
           </h2>
-          <div className={styles.mastersWorkImage}>
-            <img src="/images/jianzhang/white-Photoroom (2) 1.png" alt="Master's work teacup" />
-          </div>
           <Link href="/masters-work">
             <button className={styles.exploreButton}>EXPLORE MORE</button>
           </Link>
         </div>
       </section>
       
-      <Footer />
     </main>
   );
 }

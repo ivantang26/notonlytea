@@ -32,9 +32,11 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  padding: clamp(2rem, 5vw, 5rem);
-  padding-top: 180px;
-  max-width: 1200px;
+  display: inline-flex;
+  padding: 203px 205px 285px 58px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 267px;
 }
 
 .heroTitle {
@@ -58,60 +60,74 @@
 }
 
 .outlineButton {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding: 12px 17px;
-  width: fit-content;
-  min-width: 186px;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 10px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.12);
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .outlineButton:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 225, 192, 0.4);
   transform: translateY(-2px);
 }
 
 .primaryButton {
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
   padding: 12px 18px;
-  width: fit-content;
+  gap: 10px;
+  min-width: 200px;
   height: 48px;
-  background: #454d07;
-  backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
+  background: #414607;
+  border: none;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .primaryButton:hover {
-  background: #5a6309;
+  background: #4f5608;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
+.primaryButton img,
 .primaryButton svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 /* Products Grid Section */
@@ -300,52 +316,66 @@
 }
 
 .buyNowButton {
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
-  padding: 16px 18px;
-  height: 55px;
-  background: #454d07;
-  backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 10px;
+  min-width: 200px;
+  height: 48px;
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
+  background: #414607;
+  border: none;
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
 }
 
 .buyNowButton:hover {
-  background: #5a6309;
+  background: #4f5608;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 }
 
 .contactButton {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding: 16px 18px;
-  height: 55px;
-  background: #171717;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 10px;
+  height: 48px;
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 400;
-  font-size: 0.875rem;
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
 }
 
 .contactButton:hover {
-  background: #252525;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 225, 192, 0.4);
   transform: translateY(-2px);
 }
 
@@ -417,28 +447,34 @@
 }
 
 .exploreButton {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  padding: 12px 17px;
-  min-width: 322px;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 10px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.12);
+  min-width: 200px;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12.3px);
-  border: 1px solid #ffcc66;
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 500;
+  font-family: 'Hydrella', sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   color: #ffffff;
-  letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
 }
 
 .exploreButton:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 225, 192, 0.4);
   transform: translateY(-2px);
 }
 

@@ -160,7 +160,7 @@ export default function MastersWorkPage() {
         </div>
       </section>
       
-      <Footer />
+      
     </main>
   );
 }

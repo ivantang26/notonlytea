@@ -411,6 +411,11 @@
   .contactButton {
     max-width: 100%;
   }
+
+  .exploreButton {
+    width: 100%;
+    min-width: unset;
+  }
 }
 
 @media (max-width: 480px) {
@@ -428,6 +433,11 @@
 
   .scopeImage {
     max-width: 350px;
+  }
+
+  .exploreButton {
+    width: 100%;
+    min-width: unset;
   }
 }
 

@@ -1,11 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Navigation.module.css';
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollThreshold = 100; // Start hiding after scrolling 100px
+      
+      if (currentScrollY < scrollThreshold) {
+        // Always show header at the top of the page
+        setIsHidden(false);
+      } else if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+        // Scrolling down - hide header
+        setIsHidden(true);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
+        setIsHidden(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,7 +44,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={`${styles.navigation} ${isHidden ? styles.hidden : ''}`}>
       <div className={styles.navContainer}>
         <div className={styles.logo}>
           <Link href="/">

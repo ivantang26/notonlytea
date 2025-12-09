@@ -8,6 +8,11 @@
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.navigation.hidden {
+  transform: translateY(-100%);
 }
 
 .navContainer {

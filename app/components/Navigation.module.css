@@ -135,7 +135,7 @@
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  width: 30px;
+  width: 25px;
   height: 24px;
   background: transparent;
   border: none;
@@ -385,8 +385,8 @@
   }
 
   .mobileMenuToggle {
-    left: 1rem;
-    top: 0.75rem;
+    left: 2rem;
+    top: 3.75rem;
   }
 
   .mobileIcons {

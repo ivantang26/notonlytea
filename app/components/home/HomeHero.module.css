@@ -78,12 +78,14 @@
 
 .ctaGroup {
   position: absolute;
-  right: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 2rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .secondaryBtn {
@@ -93,6 +95,7 @@
   align-items: center;
   padding: 12px 20px;
   gap: 10px;
+  width: 60%;
   min-width: 200px;
   height: 48px;
   background: rgba(17, 17, 17, 0.65);
@@ -117,8 +120,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 18px;
+  padding: 12px 10px;
   gap: 10px;
+  width: 60%;
   min-width: 200px;
   height: 48px;
   border-radius: 4px;
@@ -153,16 +157,18 @@
   .copyGroup {
     left: 1.5rem;
     right: 1.5rem;
-    bottom: 8rem;
+    bottom: 10rem;
     max-width: none;
   }
 
   .ctaGroup {
     position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     bottom: 2rem;
     flex-direction: column;
+    width: 60%;
   }
 
   .primaryBtn,
@@ -173,14 +179,16 @@
 
 @media (max-width: 480px) {
   .copyGroup {
-    bottom: 9rem;
+    bottom: 11rem;
     left: 1.25rem;
     right: 1.25rem;
   }
 
   .ctaGroup {
-    left: 1.25rem;
-    right: 1.25rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 60%;
   }
 }
 

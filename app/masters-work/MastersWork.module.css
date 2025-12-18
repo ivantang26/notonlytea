@@ -527,15 +527,62 @@
 
   .heroTitle {
     white-space: pre-line;
+    font-size: 2.5rem;
   }
 
   .heroDescription {
-    font-size: clamp(18px, 3.2vw, 24.569px);
+    font-size: 16px;
+  }
+
+  .heroButtons {
+    max-width: 280px;
+  }
+
+  .outlineButton,
+  .primaryButton {
+    min-width: unset;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
+  }
+
+  .miraclesTitle {
+    font-size: 2.5rem;
+  }
+
+  .collectionsTitle {
+    font-size: 2.5rem;
   }
   
   .collectionsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .collectionId {
+    font-size: 0.9rem;
+  }
+
+  .collectionPrice,
+  .collectionType {
+    font-size: 0.8rem;
+  }
+
+  .productTitle {
+    font-size: 2.5rem;
+  }
+
+  .productDescription {
+    font-size: 0.9rem;
+  }
+
+  .attributeLabel {
+    font-size: 1rem;
+  }
+
+  .attributeValue {
+    font-size: 0.85rem;
   }
   
   .productAttributes {
@@ -561,6 +608,15 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .addToCartButton {
+    min-width: unset;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -573,22 +629,61 @@
   }
 
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     white-space: pre-line;
   }
 
   .heroDescription {
-    font-size: 18px;
-    letter-spacing: -0.36px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+  }
+
+  .heroButtons {
+    max-width: 200px;
+  }
+
+  .outlineButton,
+  .primaryButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
   }
   
   .miraclesTitle,
   .collectionsTitle {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+  }
+
+  .collectionId {
+    font-size: 0.85rem;
+  }
+
+  .collectionPrice,
+  .collectionType {
+    font-size: 0.75rem;
   }
   
   .productTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .productDescription {
+    font-size: 0.85rem;
+  }
+
+  .attributeLabel {
+    font-size: 0.9rem;
+  }
+
+  .attributeValue {
+    font-size: 0.8rem;
+  }
+
+  .addToCartButton {
+    max-width: 200px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
   }
 }
 

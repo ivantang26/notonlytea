@@ -514,19 +514,58 @@
 @media (max-width: 768px) {
   .heroContent {
     padding-top: 140px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
   }
 
   .heroButtons {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 280px;
+  }
+
+  .outlineButton,
+  .primaryButton {
+    min-width: unset;
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
 
   .productCard {
     width: 260px;
   }
 
+  .productCardName {
+    font-size: 0.9rem;
+  }
+
+  .productCardPrice {
+    font-size: 0.8rem;
+  }
+
   .productImageContainer {
     height: 380px;
+  }
+
+  .featuredProductTitle {
+    font-size: 2.5rem;
+  }
+
+  .featuredProductDescription {
+    font-size: 0.9rem;
+  }
+
+  .featuredAttributeLabel {
+    font-size: 1rem;
+  }
+
+  .featuredAttributeValue {
+    font-size: 0.85rem;
   }
 
   .featuredAttribute {
@@ -539,18 +578,12 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  .mastersWorkTitle {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .heroTitle {
-    font-size: 2.5rem;
-  }
-
-  .featuredProductTitle {
-    font-size: 3rem;
+  .buyNowButton,
+  .contactButton {
+    min-width: unset;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
 
   .mastersWorkTitle {
@@ -558,7 +591,77 @@
   }
 
   .exploreButton {
-    min-width: 100%;
+    min-width: unset;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 150px;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .heroButtons {
+    max-width: 200px;
+  }
+
+  .outlineButton,
+  .primaryButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
+  }
+
+  .productCardName {
+    font-size: 0.85rem;
+  }
+
+  .productCardPrice {
+    font-size: 0.75rem;
+  }
+
+  .featuredProductTitle {
+    font-size: 2rem;
+  }
+
+  .featuredProductDescription {
+    font-size: 0.85rem;
+  }
+
+  .featuredAttributeLabel {
+    font-size: 0.9rem;
+  }
+
+  .featuredAttributeValue {
+    font-size: 0.8rem;
+  }
+
+  .buyNowButton,
+  .contactButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
+  }
+
+  .mastersWorkTitle {
+    font-size: 1.75rem;
+  }
+
+  .exploreButton {
+    max-width: 200px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
   }
 }
 

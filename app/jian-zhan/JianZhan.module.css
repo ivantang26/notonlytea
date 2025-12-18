@@ -400,31 +400,73 @@
     padding: 140px 1.5rem 3rem;
   }
 
+  .productTitle h1 {
+    font-size: 2.5rem;
+  }
+
+  .productDescription {
+    font-size: 1rem;
+  }
+
+  .attribute h3 {
+    font-size: 1.1rem;
+  }
+
+  .attribute p {
+    font-size: 1rem;
+  }
+
   .productGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .productCard h3 {
+    font-size: 0.95rem;
+  }
+
+  .productCard .price,
+  .productCard .category {
+    font-size: 0.85rem;
   }
 
   .miraclesSection {
     padding: 4rem 1.5rem;
   }
 
+  .miraclesSection h2 {
+    font-size: 2.5rem;
+  }
+
   .scopeImage {
     max-width: 500px;
   }
 
+  .masterWorkContent h2 {
+    font-size: 2.5rem;
+  }
+
   .actionButtons {
     width: 100%;
+    max-width: 280px;
   }
 
   .buyButton,
   .contactButton {
     max-width: 100%;
+    min-width: unset;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
 
   .exploreButton {
     width: 100%;
     min-width: unset;
+    max-width: 280px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
 }
 
@@ -434,20 +476,64 @@
   }
 
   .productTitle h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+
+  .productDescription {
+    font-size: 0.9rem;
+  }
+
+  .attribute h3 {
+    font-size: 0.95rem;
+  }
+
+  .attribute p {
+    font-size: 0.85rem;
   }
 
   .alsoLikeSection h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .productCard h3 {
+    font-size: 0.9rem;
+  }
+
+  .productCard .price,
+  .productCard .category {
+    font-size: 0.8rem;
+  }
+
+  .miraclesSection h2 {
+    font-size: 1.75rem;
   }
 
   .scopeImage {
     max-width: 350px;
   }
 
+  .masterWorkContent h2 {
+    font-size: 1.75rem;
+  }
+
+  .actionButtons {
+    max-width: 200px;
+  }
+
+  .buyButton,
+  .contactButton {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
+  }
+
   .exploreButton {
     width: 100%;
     min-width: unset;
+    max-width: 200px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
   }
 }
 

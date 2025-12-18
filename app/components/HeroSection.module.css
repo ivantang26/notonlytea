@@ -192,11 +192,12 @@
   }
 
   .heroTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .heroSubtitle {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
   }
 
   .splineContainer {
@@ -213,14 +214,24 @@
 
   .buttonGroup {
     width: 100%;
+    max-width: 280px;
     align-items: stretch;
   }
 
-  .btnPrimary{
+  .btnPrimary {
     width: 100%;
+    min-width: unset;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
+
   .btnSecondary {
     width: 100%;
+    min-width: unset;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    height: 42px;
   }
 }
 
@@ -230,11 +241,12 @@
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .heroSubtitle {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   .splineContainer {
@@ -242,17 +254,24 @@
     max-width: 620px;
   }
 
-  .btnPrimary {
-    padding: 10px 16px;
-    font-size: 0.875rem;
-    height: 42px;
-    width: 100%;
+  .buttonGroup {
+    max-width: 220px;
   }
-  .btnSecondary {
-    padding: 10px 16px;
-    font-size: 0.875rem;
-    height: 42px;
+
+  .btnPrimary {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
     width: 100%;
+    min-width: unset;
+  }
+
+  .btnSecondary {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    height: 38px;
+    width: 100%;
+    min-width: unset;
   }
 }
 

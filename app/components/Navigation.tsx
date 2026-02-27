@@ -8,6 +8,21 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile/iPad screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,12 +32,24 @@ export default function Navigation() {
       if (currentScrollY < scrollThreshold) {
         // Always show header at the top of the page
         setIsHidden(false);
-      } else if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-        // Scrolling down - hide header
-        setIsHidden(true);
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up - show header
-        setIsHidden(false);
+      } else if (isMobile) {
+        // Mobile/iPad: hide when scrolling UP, show when scrolling DOWN
+        if (currentScrollY < lastScrollY) {
+          // Scrolling up - hide header
+          setIsHidden(true);
+        } else if (currentScrollY > lastScrollY) {
+          // Scrolling down - show header
+          setIsHidden(false);
+        }
+      } else {
+        // Desktop: hide when scrolling DOWN, show when scrolling UP
+        if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+          // Scrolling down - hide header
+          setIsHidden(true);
+        } else if (currentScrollY < lastScrollY) {
+          // Scrolling up - show header
+          setIsHidden(false);
+        }
       }
       
       setLastScrollY(currentScrollY);
@@ -33,7 +60,7 @@ export default function Navigation() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, isMobile]);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
